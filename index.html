@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary SEO Meta Tags -->
-    <title>Saffron | Digital Marketing, Graphic Design & Development in Bilbao, Spain</title>
-    <meta name="title" content="Saffron | Digital Marketing, Graphic Design & Development in Bilbao, Spain">
-    <meta name="description" content="Saffron is a leading agency based in Bilbao, Spain providing digital marketing, website development, mobile app development, and professional graphic design across Europe, Middle East, and Asia.">
-    <meta name="keywords" content="Digital Marketing Europe, Graphic Design Bilbao, Web Development Bilbao, App Development Spain, E-commerce Solutions, Saffron Commerce and Marketing, SEO Services Spain, Branding Agency">
+    <title>Saffron | Digital Marketing, Design & Video Editing in Bilbao, Spain</title>
+    <meta name="title" content="Saffron | Digital Marketing, Design & Video Editing in Bilbao, Spain">
+    <meta name="description" content="Saffron is a leading agency based in Bilbao, Spain providing digital marketing, website development, mobile app development, graphic design, and video editing across Europe, Middle East, and Asia.">
+    <meta name="keywords" content="Digital Marketing Europe, Video Editing Bilbao, Graphic Design Bilbao, Web Development Bilbao, App Development Spain, E-commerce Solutions, Saffron Commerce and Marketing, SEO Services Spain, Branding Agency">
     <meta name="author" content="Saffron Commerce & Marketing">
     <meta name="robots" content="index, follow">
 
@@ -16,13 +16,13 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yourusername.github.io/">
     <meta property="og:title" content="Saffron | Premium Digital Marketing, Design & Web Development">
-    <meta property="og:description" content="Empowering businesses across Europe, the Middle East, and Asia with top-tier digital marketing, graphic design, web, and app development services. Based in Bilbao, Spain.">
+    <meta property="og:description" content="Empowering businesses across Europe, the Middle East, and Asia with top-tier digital marketing, graphic design, video editing, web, and app development services. Based in Bilbao, Spain.">
     <meta property="og:image" content="images/cover.webp">
 
     <!-- Twitter SEO -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="Saffron | Digital Marketing, Design & Web Development">
-    <meta property="twitter:description" content="Elevate your brand with digital marketing, graphic design & IT development from Bilbao, Spain. Serving global clients.">
+    <meta property="twitter:description" content="Elevate your brand with digital marketing, video editing, graphic design & IT development from Bilbao, Spain. Serving global clients.">
     <meta property="twitter:image" content="images/cover.webp">
 
     <!-- Favicon -->
@@ -163,7 +163,7 @@
 
         .service-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
         }
 
@@ -248,7 +248,13 @@
             padding-top: 15px;
         }
 
-        /* Mobile Responsiveness */
+        /* Responsive Layout Adjustments */
+        @media (max-width: 1024px) {
+            .service-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
@@ -262,6 +268,9 @@
             }
             .hero p {
                 font-size: 1rem;
+            }
+            .service-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -306,6 +315,11 @@
                 <i class="fas fa-palette"></i>
                 <h3>Graphic Design</h3>
                 <p>Creative brand identities, logos, marketing banners, brochures, and stunning social media visual graphics.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-video"></i>
+                <h3>Video Editing</h3>
+                <p>Professional video editing, promotional ads, Reels, TikTok content, and high-impact corporate video production.</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-laptop-code"></i>
