@@ -191,10 +191,38 @@
             color: var(--dark-color);
         }
 
+        /* Video Showcase Section */
+        .video-section {
+            padding: 60px 5%;
+            background-color: #f3f4f6;
+            text-align: center;
+        }
+
+        .video-section h2 {
+            font-size: 2.2rem;
+            color: var(--dark-color);
+            margin-bottom: 10px;
+        }
+
+        .video-container {
+            max-width: 360px;
+            margin: 30px auto 0 auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            aspect-ratio: 9 / 16;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
         /* About / Global Reach Section */
         .about {
             padding: 60px 5%;
-            background-color: #f3f4f6;
+            background-color: #fff;
             text-align: center;
         }
 
@@ -208,6 +236,79 @@
             max-width: 800px;
             margin: 0 auto 20px auto;
             color: #4b5563;
+        }
+
+        /* Inquiry Form Section */
+        .contact-form-section {
+            padding: 60px 5%;
+            background-color: #f3f4f6;
+            text-align: center;
+        }
+
+        .contact-form-section h2 {
+            font-size: 2.2rem;
+            color: var(--dark-color);
+            margin-bottom: 10px;
+        }
+
+        .contact-form-section p {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .inquiry-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            text-align: left;
+        }
+
+        .inquiry-form label {
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+
+        .inquiry-form input,
+        .inquiry-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .inquiry-form input:focus,
+        .inquiry-form textarea:focus {
+            border-color: var(--primary-color);
+        }
+
+        .inquiry-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .inquiry-form button {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .inquiry-form button:hover {
+            background-color: #b45309;
         }
 
         /* Footer */
@@ -286,14 +387,15 @@
         <nav>
             <a href="#home">Home</a>
             <a href="#services">Services</a>
+            <a href="#showcase">Showcase</a>
             <a href="#about">About Us</a>
-            <a href="#contact">Contact</a>
+            <a href="#inquiry">Inquiry</a>
         </nav>
     </header>
 
-    <!-- Main Hero Banner (Cover WebP Image as Background) -->
+    <!-- Main Hero Banner -->
     <section id="home" class="hero">
-        <h2>Saffron Commerce And Digital Marketing</h2>
+        <h2>Saffron Commerce & Marketing</h2>
         <p>Your Premier Digital Marketing, Graphic Design, Web & Mobile App Development Agency based in Bilbao, Spain. Connecting Europe, Middle East, and Asia.</p>
         <a href="https://wa.me/34631947691" target="_blank" class="btn-whatsapp">
             <i class="fab fa-whatsapp"></i> Chat on WhatsApp
@@ -339,14 +441,43 @@
         </div>
     </section>
 
+    <!-- Video Showcase Section -->
+    <section id="showcase" class="video-section">
+        <h2>Featured Video Showcase</h2>
+        <p style="color: #666;">Check out our latest video content on YouTube.</p>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/_lqDXdHOdM4" title="Saffron YouTube Showcase" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section id="about" class="about">
         <h2>Global Vision, Local Roots in Bilbao</h2>
         <p>Located in <strong>Bilbao, Spain</strong>, Saffron Commerce and Marketing serves as a bridge between high-growth markets. We bring cutting-edge web development, software, graphic design, and marketing solutions to businesses across <strong>Europe, the Middle East, and Asia</strong>.</p>
     </section>
 
+    <!-- Web3Forms Inquiry Section -->
+    <section id="inquiry" class="contact-form-section">
+        <h2>Send Us an Inquiry</h2>
+        <p>Have a project in mind? Fill out the form below and we will get back to you shortly.</p>
+        <form action="https://api.web3forms.com/submit" method="POST" class="inquiry-form">
+            <input type="hidden" name="access_key" value="e43ce16c-4d03-4390-bb02-9714045491ba">
+            
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about your project or inquiry..." required></textarea>
+
+            <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+        </form>
+    </section>
+
     <!-- Footer Section -->
-    <footer id="contact">
+    <footer>
         <div class="footer-info">
             <p><i class="fas fa-map-marker-alt"></i> Bilbao, Spain</p>
             <p><i class="fab fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/34631947691" style="color:#25d366; text-decoration:none;">+34 631 94 76 91</a></p>
@@ -357,6 +488,7 @@
             <a href="https://www.youtube.com/@Saffronandglow" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
             <a href="https://www.instagram.com/saffroncommerceandmarketing/?hl=en" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             <a href="https://www.facebook.com/SaffronCommerceandMarketingAgency" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/in/easmin-akter-8a3829424/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
         </div>
 
         <div class="copyright">
